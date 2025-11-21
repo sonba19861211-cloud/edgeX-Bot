@@ -18,10 +18,12 @@ endpoints:
 # 仕様では contractId を使うため、symbol の代わりに contract_id を推奨
 contract_id: 10000001
 poll_interval_sec: 0.2
+
 strategy:
   lookback: 5
   threshold_bps: 0.1
   size: 0.001
+  stop_loss_percent: ${STOP_LOSS_PERCENT:3}
 
 # createOrder用 L2署名に必要な設定（実値に置換してください）
 l2_config:
